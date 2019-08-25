@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { CrudModule } from './crud/crud.module';
 import { AppAdminModule } from './app-admin/app-admin.module';
+import { AppAlertsModule } from './app-alerts/app-alerts.module';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,12 @@ import { AppAdminModule } from './app-admin/app-admin.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     CoreModule,
     SharedModule,
-    CrudModule,
-    AppAdminModule
+    AppAdminModule,
+    AppAlertsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppAdminComponent } from './app-admin.component';
+import { AppAdminComponent } from './admin/admin.component';
 import { UserRoutes } from './user/user.routes';
 
 
 const routes: Routes = [
-  { path: 'admin', component: AppAdminComponent, children: [...UserRoutes] }
+  { path: '', component: AppAdminComponent, children: [...UserRoutes] }
 ];
 
 @NgModule({
