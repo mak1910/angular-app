@@ -8,6 +8,8 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AppAdminModule } from './app-admin/app-admin.module';
 import { AppAlertsModule } from './app-alerts/app-alerts.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AppAlertsModule } from './app-alerts/app-alerts.module';
     CoreModule,
     SharedModule,
     AppAdminModule,
-    AppAlertsModule
+    AppAlertsModule,
+    BrowserAnimationsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
