@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AppAdminRoutingModule } from './app-admin-routing.module';
 import { AppAdminComponent } from './admin/admin.component';
 import { UserModule } from './user/user.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { UserModule } from './user/user.module';
   imports: [
     CommonModule,
     AppAdminRoutingModule,
+    SharedModule,
     UserModule
   ]
 })

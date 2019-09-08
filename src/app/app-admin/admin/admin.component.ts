@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { ModalComponent } from 'src/app/shared/elements/modal/modal.component';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppAdminComponent implements OnInit {
 
+  @ViewChild('modalElement', { static: true }) modalElement: ModalComponent;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showModal() {
+    this.modalElement.open();
   }
 
 }
