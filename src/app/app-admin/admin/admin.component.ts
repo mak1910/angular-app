@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { ModalComponent } from 'src/app/shared/elements/modal/modal.component';
+import { State } from '@ngrx/store';
+import { AppState } from 'src/app/app.model';
 
 @Component({
   selector: 'app-admin',
@@ -9,9 +11,12 @@ import { ModalComponent } from 'src/app/shared/elements/modal/modal.component';
 export class AppAdminComponent implements OnInit {
 
   @ViewChild('modalElement', { static: true }) modalElement: ModalComponent;
-  constructor() { }
+  constructor(
+    private _state: State<AppState>
+  ) { }
 
   ngOnInit() {
+    console.log(this._state);
   }
 
   showModal() {
