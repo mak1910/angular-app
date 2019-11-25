@@ -1,7 +1,7 @@
-import { User } from './core.model';
+import { User, RestContainer } from './core.model';
 
 export interface CoreState {
-    user: User
+    user: RestContainer<User>;
 }
 
 export const initialCoreState = {

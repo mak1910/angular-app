@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './component/navbar/navbar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StoreModule } from '@ngrx/store';
-import { coreReducers } from './store/core.reducers';
 import { EffectsModule } from '@ngrx/effects';
+
+import { coreReducers } from './store/core.reducers';
 import { CoreEffects } from './store/core.effects';
+import { NavbarComponent } from './component/navbar/navbar.component';
 import { StateFeatures } from '../app.model';
-
-
 
 @NgModule({
   declarations: [
@@ -15,6 +15,7 @@ import { StateFeatures } from '../app.model';
   ],
   imports: [
     CommonModule,
+    FontAwesomeModule,
     StoreModule.forFeature(StateFeatures.Core, coreReducers),
     EffectsModule.forFeature([CoreEffects])
   ],

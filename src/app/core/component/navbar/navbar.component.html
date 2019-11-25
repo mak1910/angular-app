@@ -15,7 +15,8 @@
                 <a class="nav-link" href="/alerts">Alerts <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">{{ (user$ | async)?.name }}</a>
+                <a class="nav-link" href="#">{{ (user$ | async)?.data?.name }}</a>
+                <fa-icon *ngIf="(user$ | async)?.loading" [icon]="faSpinner"></fa-icon>
             </li>
         </ul>
     </div>
