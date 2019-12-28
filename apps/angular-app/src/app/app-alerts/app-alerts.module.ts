@@ -9,7 +9,6 @@ import { EffectsModule } from '@ngrx/effects';
 import { AlertEffects } from './store/alert.effects';
 import { StateFeatures } from '../app.model';
 
-
 @NgModule({
   declarations: [AlertsComponent],
   imports: [
@@ -17,6 +16,6 @@ import { StateFeatures } from '../app.model';
     AppAlertsRoutingModule,
     StoreModule.forFeature(StateFeatures.Alert, alertReducers),
     EffectsModule.forFeature([AlertEffects])
-  ],
+  ]
 })
-export class AppAlertsModule { }
+export class AppAlertsModule {}

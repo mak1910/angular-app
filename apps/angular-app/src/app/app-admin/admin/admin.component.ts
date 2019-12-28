@@ -9,18 +9,12 @@ import { AppState } from '../../app.model';
   styleUrls: ['./admin.component.scss']
 })
 export class AppAdminComponent implements OnInit {
-
   @ViewChild('modalElement', { static: true }) modalElement: ModalComponent;
-  constructor(
-    private _state: State<AppState>
-  ) { }
+  constructor(private state: State<AppState>) {}
 
-  ngOnInit() {
-    console.log(this._state);
-  }
+  ngOnInit() {}
 
   showModal() {
     this.modalElement.open();
   }
-
 }

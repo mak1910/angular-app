@@ -9,12 +9,16 @@ npm install
 npm start
 ```
 
-## Running angular-app
+### Running angular-app
 ```shell
 ng server angular-app
 ```
 
-## Running react-app
+### Running react-app
 ```shell
 ng server react-app
 ```
+
+## Helper References
+- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Prettier](https://github.com/prettier/prettier-vscode)

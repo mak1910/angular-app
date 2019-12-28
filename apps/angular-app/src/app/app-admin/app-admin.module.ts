@@ -6,14 +6,8 @@ import { AppAdminComponent } from './admin/admin.component';
 import { UserModule } from './user/user.module';
 import { SharedModule } from '../shared/shared.module';
 
-
 @NgModule({
   declarations: [AppAdminComponent],
-  imports: [
-    CommonModule,
-    AppAdminRoutingModule,
-    SharedModule,
-    UserModule
-  ]
+  imports: [CommonModule, AppAdminRoutingModule, SharedModule, UserModule]
 })
-export class AppAdminModule { }
+export class AppAdminModule {}

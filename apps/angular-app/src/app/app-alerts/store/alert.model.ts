@@ -1,4 +1,4 @@
 export interface Alert {
-    id: number;
-    message: string;
+  id: number;
+  message: string;
 }
