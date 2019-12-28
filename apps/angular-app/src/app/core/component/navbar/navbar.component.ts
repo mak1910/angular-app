@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Store, select, createSelector } from '@ngrx/store';
-import { CoreState } from '../../store/core.state';
+import { Store, select } from '@ngrx/store';
+import { AppState } from '../../../app.model';
 import { GetUserAction } from '../../store/core.actions';
-import { AppState } from 'src/app/app.model';
+
 import { userSelector } from '../../store/core.selectors';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',

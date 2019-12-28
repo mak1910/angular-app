@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
-import { ModalComponent } from 'src/app/shared/elements/modal/modal.component';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ModalComponent } from '../../shared/elements/modal/modal.component';
 import { State } from '@ngrx/store';
-import { AppState } from 'src/app/app.model';
+import { AppState } from '../../app.model';
 
 @Component({
   selector: 'app-admin',

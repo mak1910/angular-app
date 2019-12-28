@@ -6,9 +6,26 @@
     "start": "ng serve",
     "build": "ng build --prod --stats-json=true",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
-    "analyze": "webpack-bundle-analyzer dist/angular-app/stats-es5.json"
+    "analyze": "webpack-bundle-analyzer dist/angular-app/stats-es5.json",
+    "nx": "nx",
+    "affected:apps": "nx affected:apps",
+    "affected:libs": "nx affected:libs",
+    "affected:build": "nx affected:build",
+    "affected:e2e": "nx affected:e2e",
+    "affected:test": "nx affected:test",
+    "affected:lint": "nx affected:lint",
+    "affected:dep-graph": "nx affected:dep-graph",
+    "affected": "nx affected",
+    "format": "nx format:write",
+    "format:write": "nx format:write",
+    "format:check": "nx format:check",
+    "update": "ng update @nrwl/workspace",
+    "update:check": "ng update",
+    "dep-graph": "nx dep-graph",
+    "workspace-schematic": "nx workspace-schematic",
+    "help": "nx help"
   },
   "private": true,
   "dependencies": {
@@ -30,16 +47,18 @@
     "@ngrx/router-store": "^8.4.0",
     "@ngrx/store": "^8.4.0",
     "@ngrx/store-devtools": "^8.4.0",
+    "@nrwl/workspace": "^8.9.0",
     "bootstrap": "^4.3.1",
     "document-register-element": "^1.7.2",
     "ngx-bootstrap": "^5.1.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "webpack-bundle-analyzer": "^3.4.1",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "@nrwl/angular": "8.9.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.802.2",
+    "@angular-devkit/build-angular": "^0.803.21",
     "@angular/cli": "~8.2.2",
     "@angular/compiler-cli": "~8.2.0",
     "@angular/language-service": "~8.2.0",
@@ -58,6 +77,8 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "@nrwl/workspace": "8.9.0",
+    "prettier": "1.18.2"
   }
 }

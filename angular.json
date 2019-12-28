@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "",
   "projects": {
     "angular-app": {
       "projectType": "application",
@@ -10,27 +10,27 @@
           "style": "scss"
         }
       },
-      "root": "",
-      "sourceRoot": "src",
+      "root": "apps/angular-app",
+      "sourceRoot": "apps/angular-app/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-app",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "outputPath": "dist/apps/angular-app",
+            "index": "apps/angular-app/src/index.html",
+            "main": "apps/angular-app/src/main.ts",
+            "polyfills": "apps/angular-app/src/polyfills.ts",
+            "tsConfig": "apps/angular-app/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "apps/angular-app/src/favicon.ico",
+              "apps/angular-app/src/assets"
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
-              "src/styles.scss"
+              "apps/angular-app/src/styles.scss"
             ],
             "scripts": [
               {
@@ -42,8 +42,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "apps/angular-app/src/environments/environment.ts",
+                  "with": "apps/angular-app/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -90,18 +90,18 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
+            "main": "apps/angular-app/src/test.ts",
+            "polyfills": "apps/angular-app/src/polyfills.ts",
+            "tsConfig": "apps/angular-app/tsconfig.spec.json",
+            "karmaConfig": "apps/angular-app/karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "apps/angular-app/src/favicon.ico",
+              "apps/angular-app/src/assets"
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
-              "src/styles.scss"
+              "apps/angular-app/src/styles.scss"
             ],
             "scripts": []
           }
@@ -110,25 +110,39 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "apps/angular-app/tsconfig.app.json",
+              "apps/angular-app/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
           }
-        },
+        }
+      }
+    },
+    "angular-app-e2e": {
+      "projectType": "application",
+      "root": "apps/angular-app-e2e",
+      "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
+            "protractorConfig": "apps/angular-app-e2e/protractor.conf.js",
             "devServerTarget": "angular-app:serve"
           },
           "configurations": {
             "production": {
               "devServerTarget": "angular-app:serve:production"
             }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/angular-app-e2e/tsconfig.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

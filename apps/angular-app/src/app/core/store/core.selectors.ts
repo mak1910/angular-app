@@ -1,7 +1,6 @@
-import { CoreState } from './core.state';
 import { createSelector } from '@ngrx/store';
-import { AppState } from 'src/app/app.model';
 import { User, RestContainer } from './core.model';
+import { AppState } from '../../app.model';
 
 const user = (state: AppState) => state.core.user
 
