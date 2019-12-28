@@ -7,7 +7,7 @@ import {
   CoreActionTypes,
   GetUserSuccessAction
 } from './core.actions';
-import { switchMap, tap, delay } from 'rxjs/operators';
+import { switchMap, delay } from 'rxjs/operators';
 import { of } from 'rxjs';
 
 @Injectable()
