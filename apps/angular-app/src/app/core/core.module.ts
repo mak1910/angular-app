@@ -10,17 +10,13 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { StateFeatures } from '../app.model';
 
 @NgModule({
-  declarations: [
-    NavbarComponent
-  ],
+  declarations: [NavbarComponent],
   imports: [
     CommonModule,
     FontAwesomeModule,
     StoreModule.forFeature(StateFeatures.Core, coreReducers),
     EffectsModule.forFeature([CoreEffects])
   ],
-  exports: [
-    NavbarComponent
-  ]
+  exports: [NavbarComponent]
 })
-export class CoreModule { }
+export class CoreModule {}

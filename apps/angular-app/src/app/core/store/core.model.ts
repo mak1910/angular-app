@@ -1,10 +1,10 @@
 export interface RestContainer<T> {
-    data: T;
-    loading: boolean;
-    errorMessage?: string;
+  data: T;
+  loading: boolean;
+  errorMessage?: string;
 }
 
 export interface User {
-    id: number;
-    name: string;
+  id: number;
+  name: string;
 }

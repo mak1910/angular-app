@@ -21,6 +21,7 @@
     "format": "nx format:write",
     "format:write": "nx format:write",
     "format:check": "nx format:check",
+    "prettier": "prettier --write {apps,libs}/**/*.{css,html,js,scss,ts,tsx}",
     "update": "ng update @nrwl/workspace",
     "update:check": "ng update",
     "dep-graph": "nx dep-graph",
@@ -85,17 +86,17 @@
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "jest": "24.1.0",
+    "jest-preset-angular": "7.0.0",
     "karma": "~4.1.0",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
-    "prettier": "1.18.2",
+    "prettier": "^1.18.2",
     "protractor": "~5.4.0",
     "ts-jest": "24.0.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3",
-    "jest-preset-angular": "7.0.0"
+    "typescript": "~3.5.3"
   }
 }

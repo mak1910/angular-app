@@ -8,9 +8,8 @@ describe('AppAdminComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppAdminComponent ]
-    })
-    .compileComponents();
+      declarations: [AppAdminComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

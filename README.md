@@ -8,15 +8,10 @@ This project tries to build a common workspace that houses both an Angular and a
 npm install
 npm start
 ```
-
-### Running angular-app
-```shell
-ng server angular-app
-```
-
-### Running react-app
+or 
 ```shell
 ng server react-app
+ng server angular-app
 ```
 
 ## Helper References

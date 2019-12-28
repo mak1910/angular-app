@@ -12,16 +12,12 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
   faSpinner = faSpinner;
   user$ = this._store.pipe(select(userSelector));
-  
-  constructor(
-    private _store: Store<AppState>
-  ) {}
+
+  constructor(private _store: Store<AppState>) {}
 
   ngOnInit() {
     this._store.dispatch(new GetUserAction());
   }
-
 }
