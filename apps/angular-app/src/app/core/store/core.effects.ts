@@ -12,10 +12,10 @@ import { of } from 'rxjs';
 
 @Injectable()
 export class CoreEffects {
-  constructor(private _actions: Actions, private _store: Store<CoreState>) {}
+  constructor(private actions: Actions, private store: Store<CoreState>) {}
 
   @Effect()
-  getUserEffect = this._actions.pipe(
+  getUserEffect = this.actions.pipe(
     ofType<GetUserAction>(CoreActionTypes.GetUser),
     delay(5000),
     switchMap(() => of(new GetUserSuccessAction({ id: 1, name: 'Mridul ' })))

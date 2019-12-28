@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { of, Observable, Subject } from 'rxjs';
+import { of, Observable, Subject, throwError } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 @Injectable()
@@ -24,14 +24,14 @@ export class CrudService<T> {
     this.getRecordsObservable = of([]).pipe(
       tap(res => {
         if (!(res instanceof Array)) {
-          Observable.throw('Array results expected');
+          throwError('Array results expected');
         }
         let bool = false;
         res.forEach(row => {
           bool = bool || typeof row !== 'object' || row === null;
         });
         if (bool) {
-          Observable.throw('Invalid data');
+          throwError('Invalid data');
         }
       }),
       tap(res => {
