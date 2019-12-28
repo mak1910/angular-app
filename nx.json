@@ -19,6 +19,9 @@
     },
     "react-app-e2e": {
       "tags": []
+    },
+    "elements": {
+      "tags": []
     }
   }
 }
