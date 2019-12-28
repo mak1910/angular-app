@@ -13,6 +13,12 @@
     },
     "angular-app-e2e": {
       "tags": []
+    },
+    "react-app": {
+      "tags": []
+    },
+    "react-app-e2e": {
+      "tags": []
     }
   }
 }
